@@ -3,6 +3,7 @@
 import { useState } from "react";
 import data from "@emoji-mart/data";
 import Picker from "@emoji-mart/react";
+import { Analytics } from "@vercel/analytics/react";
 import { IoCopyOutline } from "react-icons/io5";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center">
+      <Analytics />
       <div className="pt-4 lg:pt-24 pb-8">
         <h1 className="text-3xl text-white font-semibold tracking-wider">
           Emoji Picker
