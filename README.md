@@ -1,6 +1,6 @@
 # Emoji Picker
 
-https://emoji-copy.vercel.app/
+https://emojicopyandpaste.vercel.app/
 
 ## Description
 Emoji Picker is a web application designed to provide users with a convenient way to access and use emojis in their online communications. With an extensive collection of emojis sorted into categories, users can easily find the perfect emoji to express their emotions, reactions, or messages.
