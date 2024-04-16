@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       </div>
 
-      {showTooltip && (
+      {showTooltip && selectEmoji && (
         <div className="text-white text-xs bg-black bg-opacity-75 border border-gray-500 rounded py-1 px-4 mt-1">
           Copied!
         </div>
