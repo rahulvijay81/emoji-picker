@@ -9,6 +9,8 @@ export default function Home() {
   const [selectEmoji, setSelectEmoji] = useState("");
   const [showTooltip, setShowTooltip] = useState(false);
 
+  const currentYear = new Date().getFullYear()
+
   const handleCopy = () => {
     navigator.clipboard.writeText(selectEmoji);
     setShowTooltip(true);
@@ -46,6 +48,20 @@ export default function Home() {
       <div className="pt-8">
         <Picker data={data} onEmojiSelect={(e) => setSelectEmoji(e.native)} />
       </div>
+
+      <div className="flex items-center justify-center gap-1 fixed bottom-4">
+      <div className="text-center text-xs font-poppins">
+        © Copyright <b>{currentYear}</b> Designed & Built by
+      </div>
+      <div
+        className="font-bold tracking-wider cursor-pointer text-xs"
+        onClick={() => {
+          window.open("https://rahulvijay.netlify.app/");
+        }}
+      >
+        rahulvijay
+      </div>
+    </div>
     </main>
   );
 }
