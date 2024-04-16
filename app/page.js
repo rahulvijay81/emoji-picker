@@ -15,7 +15,6 @@ export default function Home() {
     setTimeout(() => setShowTooltip(false), 1500);
   };
 
-  console.log(handleCopy);
   return (
     <main className="flex min-h-screen flex-col items-center">
       <div className="pt-4 lg:pt-24 pb-8">
