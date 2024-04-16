@@ -18,7 +18,7 @@ export default function Home() {
   console.log(handleCopy);
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <div className="pt-24 pb-8">
+      <div className="pt-4 lg:pt-24 pb-8">
         <h1 className="text-3xl text-white font-semibold tracking-wider">
           Emoji Picker
         </h1>
