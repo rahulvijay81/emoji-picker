@@ -4,12 +4,11 @@ import { useState } from "react";
 import data from "@emoji-mart/data";
 import Picker from "@emoji-mart/react";
 import { IoCopyOutline } from "react-icons/io5";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [selectEmoji, setSelectEmoji] = useState("");
   const [showTooltip, setShowTooltip] = useState(false);
-
-  const currentYear = new Date().getFullYear()
 
   const handleCopy = () => {
     navigator.clipboard.writeText(selectEmoji);
@@ -20,7 +19,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
       <div className="pt-4 lg:pt-24 pb-8">
-        <h1 className="text-3xl text-white font-semibold tracking-wider">
+        <h1 className="text-3xl font-semibold tracking-wider">
           Emoji Picker
         </h1>
       </div>
@@ -49,19 +48,7 @@ export default function Home() {
         <Picker data={data} onEmojiSelect={(e) => setSelectEmoji(e.native)} />
       </div>
 
-      <div className="flex items-center justify-center gap-1 fixed bottom-4">
-      <div className="text-center text-xs font-poppins">
-        © Copyright <b>{currentYear}</b> Designed & Built by
-      </div>
-      <div
-        className="font-bold tracking-wider cursor-pointer text-xs"
-        onClick={() => {
-          window.open("https://rahulvijay.netlify.app/");
-        }}
-      >
-        rahulvijay
-      </div>
-    </div>
+      <Footer />
     </main>
   );
 }
